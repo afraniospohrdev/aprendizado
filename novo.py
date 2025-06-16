@@ -95,7 +95,7 @@ def menu():
         escolha = input("Escolha uma opção: ")
 
         if escolha in opcoes:
-            opcoes[escolha](estoque, sair)
+            opcoes[escolha](estoque)
         else:
             print("Opção inválida. Tente novamente.")
 

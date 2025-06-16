@@ -1,12 +1,12 @@
-e# Classe para representar um produto
+# Classe para representar um produto
 class Produto:
-    def __init__(self, nome, quantidade, preco):
+    def __init__(self, nome, quantidade, preço):
         self.nome = nome
         self.quantidade = quantidade
-        self.preco = preco
+        self.preço = preço
 
     def __str__(self):
-        return f"Nome: {self.nome}, Quantidade: {self.quantidade}, Preço: {self.preco}"
+        return f"Nome: {self.nome}, Quantidade: {self.quantidade}, Preço: {self.preço}"
 
 # Lista para armazenar os produtos
 estoque = []
@@ -22,12 +22,12 @@ def adicionar_produto(estoque):
         print("Quantidade inválida. Digite um número inteiro.")
         return
     try:
-        preco = float(input("Digite o preço do produto: "))
+        preço = float(input("Digite o preço do produto: "))
     except ValueError:
         print("Preço inválido. Digite um número decimal.")
         return
 
-    novo_produto = Produto(nome, quantidade, preco)
+    novo_produto = Produto(nome, quantidade, preço)
     estoque.append(novo_produto)
     print(f"Produto '{nome}' adicionado ao estoque.")
 
